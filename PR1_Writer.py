@@ -73,6 +73,9 @@ def main():
             print("Не найдены библиотеки. Повторите попытку")
             count_add :int = count_add - 1
             continue  
+        except Exception:
+            print("Незарезирвированная ошибка")
+            continue
 if __name__ == "__main__":
 	main()
 

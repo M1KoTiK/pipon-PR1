@@ -2,7 +2,6 @@
 Reads data from a file and outputs it to the console
 """
 import argparse
-from asyncio.windows_events import NULL
 import pathlib
 import subprocess
 def main():
@@ -16,6 +15,11 @@ def main():
     print("-------------------------------------------------------------------")
     print("Местоположение текстового файла - " + arguments.path)
     print("-------------------------------------------------------------------")
+    """ Если нужно открыть папку в которуюю ведётся 
+        запись, то можно использовать следующую команду:
+        subprocess.Popen(r'explorer /select,' + arguments.path)
+        :3
+    """           
     #Код логической части
     try:
         print("Фамилия\tИмя\tОтчество\tГод рождения")
